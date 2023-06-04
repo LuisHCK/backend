@@ -5,7 +5,6 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        needs: lint
         steps:
             - name: Deploy Strapi APP
               uses: appleboy/ssh-action@v0.1.10
