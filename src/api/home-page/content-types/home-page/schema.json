@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Inicio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "popular_title": {
+      "type": "string",
+      "required": true,
+      "default": "Restaurantes populares"
+    },
+    "popular_restaurants": {
+      "displayName": "popular restaurants",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.popular-restaurants"
+    },
+    "popular_categories": {
+      "displayName": "popular_categories",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.popular-categories"
+    }
+  }
+}

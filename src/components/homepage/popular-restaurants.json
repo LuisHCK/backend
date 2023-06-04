@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_popular_restaurants",
+  "info": {
+    "displayName": "popular restaurants",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "restaurant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::restaurant.restaurant"
+    }
+  }
+}
