@@ -15,7 +15,7 @@ jobs:
 
                   script: |
                       if cd condelivery; then
-                          git reset --hard origin/main
+                          git reset --hard origin/master
                           git pull
                           # Install deps
                           yarn install --frozen-lockfile
@@ -25,7 +25,7 @@ jobs:
                           sh scripts/start.sh
                       else
                           git clone https://github.com/LuisHCK/condelivery-strapi condelivery
-                          cd app
+                          cd condelivery
                           # Install deps
                           yarn install --frozen-lockfile
                           # Build the thing
