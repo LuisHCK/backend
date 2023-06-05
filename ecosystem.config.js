@@ -3,7 +3,7 @@ module.exports = {
         {
             name: 'strapi',
             script: 'npm',
-            args: 'start',
+            args: 'run start',
             env_production: {
                 NODE_ENV: 'production',
                 HOST: "0.0.0.0",
