@@ -18,18 +18,18 @@ jobs:
                           git reset --hard origin/master
                           git pull
                           # Install deps
-                          npm ci
+                          npm ci --legacy-peer-deps &&
                           # Build the thing
-                          npm build
+                          npm run build &&
                           # Spin up the server
                           sh scripts/start.sh
                       else
                           git clone https://github.com/LuisHCK/condelivery-strapi condelivery
                           cd condelivery
                           # Install deps
-                          npm ci
+                          npm ci --legacy-peer-deps &&
                           # Build the thing
-                          npm build
+                          npm run build &&
                           # Spin up the server
                           sh scripts/start.sh
                       fi
