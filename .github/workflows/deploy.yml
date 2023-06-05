@@ -21,7 +21,7 @@ jobs:
                           # Install deps
                           npm install --production --legacy-peer-deps &&
                           # Build the thing
-                          npm run build &&
+                          NODE_ENV=production npm run build &&
                           # Spin up the server
                           sh scripts/start.sh
                       else
@@ -30,7 +30,7 @@ jobs:
                           # Install deps
                           npm install --production --legacy-peer-deps &&
                           # Build the thing
-                          npm run build &&
+                          NODE_ENV=production npm run build &&
                           # Spin up the server
                           sh scripts/start.sh
                       fi
