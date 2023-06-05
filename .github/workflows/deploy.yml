@@ -18,18 +18,18 @@ jobs:
                           git reset --hard origin/master
                           git pull
                           # Install deps
-                          yarn install --frozen-lockfile
+                          npm ci
                           # Build the thing
-                          yarn build
+                          npm build
                           # Spin up the server
                           sh scripts/start.sh
                       else
                           git clone https://github.com/LuisHCK/condelivery-strapi condelivery
                           cd condelivery
                           # Install deps
-                          yarn install --frozen-lockfile
+                          npm ci
                           # Build the thing
-                          yarn build
+                          npm build
                           # Spin up the server
                           sh scripts/start.sh
                       fi

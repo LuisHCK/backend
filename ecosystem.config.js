@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'strapi',
-            script: 'yarn',
+            script: 'npm',
             args: 'start',
             env_production: {
                 NODE_ENV: 'production',
