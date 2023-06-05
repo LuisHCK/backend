@@ -12,13 +12,14 @@ jobs:
                   host: ${{secrets.SSH_SERVER}}
                   key: ${{secrets.SSH_KEY}}
                   username: ${{secrets.SSH_USERNAME}}
+                  command_timeout: 200m
 
                   script: |
                       if cd condelivery; then
                           git reset --hard origin/master
                           git pull
                           # Install deps
-                          npm ci --legacy-peer-deps &&
+                          npm install --production --legacy-peer-deps &&
                           # Build the thing
                           npm run build &&
                           # Spin up the server
@@ -27,7 +28,7 @@ jobs:
                           git clone https://github.com/LuisHCK/condelivery-strapi condelivery
                           cd condelivery
                           # Install deps
-                          npm ci --legacy-peer-deps &&
+                          npm install --production --legacy-peer-deps &&
                           # Build the thing
                           npm run build &&
                           # Spin up the server
