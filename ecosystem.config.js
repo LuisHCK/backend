@@ -12,7 +12,7 @@ module.exports = {
                 DATABASE_NAME: 'strapi', // DB name
                 DATABASE_USERNAME: 'strapi', // your username for psql
                 DATABASE_CLIENT: 'postgres',
-                DATABASE_PASSWORD: '',
+                DATABASE_PASSWORD: 'strapi',
                 APP_KEYS: "zAoPHu5ydUu8o4MERY3CFg==,HG6Ge/z82E+jTuEhb9k+qQ==,gM/TrvItdA/0Y9geDkCgjA==,U2Lm+eiLsfgdJKG4ICwR/Q==",
                 API_TOKEN_SALT: "dH8vca25D2gcW4o5XPI5Yw==",
                 ADMIN_JWT_SECRET: "p3+sUB54J/qXRaHzDwuNvA==",
