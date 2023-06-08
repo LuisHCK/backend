@@ -16,37 +16,31 @@
       "type": "decimal",
       "required": true
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "admin::user"
-    },
-    "address": {
-      "type": "string",
-      "required": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [
-        "pending",
-        "processed",
-        "in_transit",
-        "delivered",
-        "pickup_ready",
-        "cancelled"
+        "pendiente",
+        "en_proceso",
+        "enviado",
+        "completado",
+        "cancelado"
       ],
       "required": true,
-      "default": "pending"
+      "default": "pendiente"
     },
     "note": {
       "type": "text",
       "maxLength": 120
     },
-    "items": {
+    "orderItems": {
       "type": "component",
       "repeatable": true,
-      "component": "menu.item",
-      "required": true
+      "component": "order.order-item"
+    },
+    "userAddress": {
+      "type": "component",
+      "repeatable": false,
+      "component": "order.user-address"
     }
   }
 }
