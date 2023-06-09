@@ -41,6 +41,11 @@
       "type": "component",
       "repeatable": false,
       "component": "order.user-address"
+    },
+    "restaurant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::restaurant.restaurant"
     }
   }
 }
